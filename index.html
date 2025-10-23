@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잔소리 들어주는 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💬 잔소리 들어주는 앱</h1>
+            <p>마음 속 이야기를 털어놓아보세요</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <h3>📝 오늘의 잔소리</h3>
+                
+                <div class="form-group">
+                    <label for="titleInput">제목 (선택사항)</label>
+                    <input type="text" id="titleInput" placeholder="오늘의 기분을 한 줄로 표현해보세요...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="complaintInput">내용</label>
+                    <textarea id="complaintInput" placeholder="무엇이 불만인지, 어떤 일이 힘든지 자유롭게 써보세요..."></textarea>
+                    <div class="char-counter">
+                        <span id="charCount">0</span>/1000자
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>감정 선택</label>
+                    <div class="emotion-buttons" id="emotionButtons">
+                        <!-- JavaScript로 동적 생성 -->
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tagsInput">태그 (쉼표로 구분)</label>
+                    <input type="text" id="tagsInput" placeholder="예: 직장, 가족, 건강, 관계...">
+                </div>
+                
+                <button id="submitBtn">💬 잔소리 하기</button>
+            </div>
+            
+            <div class="response-section">
+                <div id="responseArea" class="hidden">
+                    <h3>🤖 AI 응답</h3>
+                    <div id="responseText"></div>
+                </div>
+            </div>
+            
+            <div class="history-toggle-section">
+                <button id="historyToggleBtn" class="history-toggle-btn">
+                    <span id="toggleIcon">📚</span>
+                    <span id="toggleText">기록 보기</span>
+                </button>
+            </div>
+            
+            <div class="history-section hidden" id="historySection">
+                <div class="history-header">
+                    <h3>📚 내 잔소리 기록</h3>
+                    <button id="closeHistoryBtn" class="close-btn">✕</button>
+                </div>
+                <div id="historyList">
+                    <div class="no-history">
+                        아직 기록된 잔소리가 없습니다. 첫 번째 잔소리를 작성해보세요!
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 잔소리 들어주는 앱</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
